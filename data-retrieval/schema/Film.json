@@ -1,0 +1,80 @@
+{
+    "api_entity_name": "films",
+    "entity_name": "Film",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "graph_property_name": "id"
+        },
+        "episode_id": {
+            "type": "integer",
+            "graph_property_name": "episodeId"
+        },
+        "opening_crawl": {
+            "type": "string",
+            "graph_property_name": "openingCrawl"
+        },
+        "producer": {
+            "type": "string",
+            "graph_property_name": "producers"
+        },
+        "title": {
+            "type": "string",
+            "graph_property_name": "title"
+        },
+        "release_date": {
+            "type": "date",
+            "graph_property_name": "releaseDate"
+        },
+        "director": {
+            "type": "string",
+            "graph_property_name": "director"
+        },
+        "characters": {
+            "type": "array",
+            "entity_name": "Person",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "species": {
+            "type": "array",
+            "entity_name": "Species",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "planets": {
+            "type": "array",
+            "entity_name": "Planet",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "starships": {
+            "type": "array",
+            "entity_name": "Starship",
+            "fields": [
+                "id",
+                "name",
+                "model"
+            ],
+            "graph_relationship_name": "Pilots"
+        },
+        "vehicles": {
+            "type": "array",
+            "entity_name": "Vehicle",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        }
+    }
+}

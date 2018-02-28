@@ -1,0 +1,64 @@
+{
+    "api_entity_name": "planets",
+    "entity_name": "Planet",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "graph_property_name": "id"
+        },
+        "rotation_period": {
+            "type": "string",
+            "graph_property_name": "rotationPeriod"
+        },
+        "name": {
+            "type": "string",
+            "graph_property_name": "name"
+        },
+        "diameter": {
+            "type": "string",
+            "graph_property_name": "diameter"
+        },
+        "population": {
+            "type": "string",
+            "graph_property_name": "population"
+        },
+        "gravity": {
+            "type": "string",
+            "graph_property_name": "gravity"
+        },
+        "surface_water": {
+            "type": "string",
+            "graph_property_name": "surfaceWaterPercentage"
+        },
+        "orbital_period": {
+            "type": "string",
+            "graph_property_name": "orbitalPeriod"
+        },
+        "terrain": {
+            "type": "string",
+            "graph_property_name": "terrain"
+        },
+        "climate": {
+            "type": "string",
+            "graph_property_name": "climate"
+        },
+        "films": {
+            "type": "array",
+            "entity_name": "Film",
+            "fields": [
+                "id",
+                "title"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "residents": {
+            "type": "array",
+            "entity_name": "Person",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "LivesOn"
+        }
+    }
+}

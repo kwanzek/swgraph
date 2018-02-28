@@ -1,0 +1,80 @@
+{
+    "api_entity_name": "starships",
+    "entity_name": "Starship",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "graph_property_name": "id"
+        },
+        "manufacturer": {
+            "type": "string",
+            "graph_property_name": "manufacturer"
+        },
+        "cargo_capacity": {
+            "type": "string",
+            "graph_property_name": "cargoCapacity"
+        },
+        "consumables": {
+            "type": "string",
+            "graph_property_name": "consumablesDuration"
+        },
+        "cost_in_credits": {
+            "type": "integer",
+            "graph_property_name": "cost"
+        },
+        "max_atmosphering_speed": {
+            "type": "string",
+            "graph_property_name": "maxAtmospheringSpeed"
+        },
+        "starship_class": {
+            "type": "string",
+            "graph_property_name": "starshipClass"
+        },
+        "crew": {
+            "type": "integer",
+            "graph_property_name": "crewSize"
+        },
+        "model": {
+            "type": "string",
+            "graph_property_name": "model"
+        },
+        "name": {
+            "type": "string",
+            "graph_property_name": "name"
+        },
+        "length": {
+            "type": "string",
+            "graph_property_name": "length"
+        },
+        "MGLT": {
+            "type": "string",
+            "graph_property_name": "maxMegalightsPerHour"
+        },
+        "hyperdrive_rating": {
+            "type": "string",
+            "graph_property_name": "hyperdriveRating"
+        },
+        "passengers": {
+            "type": "integer",
+            "graph_property_name": "passengers"
+        },
+        "films": {
+            "type": "array",
+            "entity_name": "Film",
+            "fields": [
+                "id",
+                "title"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "pilots": {
+            "type": "array",
+            "entity_name": "Person",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "Pilots"
+        }
+    }
+}

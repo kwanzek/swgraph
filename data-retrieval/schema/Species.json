@@ -1,0 +1,73 @@
+{
+    "api_entity_name": "species",
+    "entity_name": "Species",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "graph_property_name": "id"
+        },
+        "name": {
+            "type": "string",
+            "graph_property_name": "name"
+        },
+        "classification": {
+            "type": "string",
+            "graph_property_name": "classification"
+        },
+        "hair_colors": {
+            "type": "string",
+            "graph_property_name": "commonHairColors"
+        },
+        "eye_colors": {
+            "type": "string",
+            "graph_property_name": "commonEyeColors"
+        },
+        "skin_colors": {
+            "type": "string",
+            "graph_property_name": "averageSkinColors"
+        },
+        "average_height": {
+            "type": "string",
+            "graph_property_name": "averageHeight"
+        },
+        "average_lifespan": {
+            "type": "string",
+            "graph_property_name": "averageLifeSpan"
+        },
+        "designation": {
+            "type": "string",
+            "graph_property_name": "designation"
+        },
+        "language": {
+            "type": "string",
+            "graph_property_name": "language"
+        },
+        "homeworld": {
+            "type": "object",
+            "entity_name": "Planet",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "OriginatesFrom"
+        },
+        "films": {
+            "type": "array",
+            "entity_name": "Film",
+            "fields": [
+                "id",
+                "title"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "people": {
+            "type": "array",
+            "entity_name": "Person",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "Is"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  persistent:
+    image: tianon/true
+    restart: "no"
+    depends_on:
+      - neo4j
+
+  neo4j:
+    image: neo4j
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      - NEO4J_AUTH=none
+
+  data-retrieval:
+    build:
+      context: data-retrieval
+      dockerfile: Dockerfile
+
+  ingestion-engine:
+    build:
+      context: ingestion-engine
+      dockerfile: Dockerfile
+    ports:
+      - 9871:9871

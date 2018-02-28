@@ -1,0 +1,88 @@
+{
+    "api_entity_name": "people",
+    "entity_name": "Person",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "graph_property_name": "id"
+        },
+        "mass": {
+            "type": "string",
+            "graph_property_name": "mass"
+        },
+        "eye_color": {
+            "type": "string",
+            "graph_property_name": "eyeColor"
+        },
+        "skin_color": {
+            "type": "string",
+            "graph_property_name": "skinColor"
+        },
+        "hair_color": {
+            "type": "string",
+            "graph_property_name": "hairColor"
+        },
+        "height": {
+            "type": "string",
+            "graph_property_name": "height"
+        },
+        "name": {
+            "type": "string",
+            "graph_property_name": "name"
+        },
+        "gender": {
+            "type": "string",
+            "graph_property_name": "gender"
+        },
+        "birth_year": {
+            "type": "string",
+            "graph_property_name": "birthYear"
+        },
+        "films": {
+            "type": "array",
+            "entity_name": "Film",
+            "fields": [
+                "id",
+                "title"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        },
+        "species": {
+            "type": "array",
+            "entity_name": "Species",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "Is"
+        },
+        "homeworld": {
+            "type": "object",
+            "entity_name": "Planet",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "BornOn"
+        },
+        "starships": {
+            "type": "array",
+            "entity_name": "Starship",
+            "fields": [
+                "id",
+                "name",
+                "model"
+            ],
+            "graph_relationship_name": "Pilots"
+        },
+        "vehicles": {
+            "type": "array",
+            "entity_name": "Vehicle",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "Drives"
+        }
+    }
+}

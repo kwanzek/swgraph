@@ -1,0 +1,21 @@
+{
+  "name": "initializer",
+  "version": "1.0.0",
+  "description": "Download data from SWAPI for consumption by ingestion services",
+  "main": "main.js",
+  "author": "Kyle Wanzek",
+  "license": "ISC",
+  "scripts": {
+    "start": "node main.js",
+    "test": "test"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.1",
+    "lodash": "^4.17.5",
+    "args": "^3.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1"
+  }
+}

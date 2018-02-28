@@ -1,0 +1,22 @@
+{
+  "name": "ingestion-engine",
+  "version": "1.0.0",
+  "description": "Ingestion API for putting SWAPI data into Neo",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "test"
+  },
+  "author": "Kyle Wanzek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "4.17.5",
+    "neo4j-driver": "^1.5.3",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1"
+  }
+}

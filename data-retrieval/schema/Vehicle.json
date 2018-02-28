@@ -1,0 +1,72 @@
+{
+    "api_entity_name": "vehicles",
+    "entity_name": "Vehicle",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "graph_property_name": "id"
+        },
+        "name": {
+            "type": "string",
+            "graph_property_name": "name"
+        },
+        "vehicle_class": {
+            "type": "string",
+            "graph_property_name": "vehicleClass"
+        },
+        "cargo_capacity": {
+            "type": "string",
+            "graph_property_name": "cargoCapacity"
+        },
+        "consumables": {
+            "type": "string",
+            "graph_property_name": "consumablesDuration"
+        },
+        "cost_in_credits": {
+            "type": "integer",
+            "graph_property_name": "cost"
+        },
+        "max_atmosphering_speed": {
+            "type": "string",
+            "graph_property_name": "maxAtmospheringSpeed"
+        },
+        "crew": {
+            "type": "integer",
+            "graph_property_name": "crewSize"
+        },
+        "manufacturer": {
+            "type": "string",
+            "graph_property_name": "manufacturer"
+        },
+        "model": {
+            "type": "string",
+            "graph_property_name": "model"
+        },
+        "length": {
+            "type": "string",
+            "graph_property_name": "length"
+        },
+        "passengers": {
+            "type": "integer",
+            "graph_property_name": "passengers"
+        },
+        "pilots": {
+            "type": "array",
+            "entity_name": "Person",
+            "fields": [
+                "id",
+                "name"
+            ],
+            "graph_relationship_name": "Drives"
+        },
+        "films": {
+            "type": "array",
+            "entity_name": "Film",
+            "fields": [
+                "id",
+                "title"
+            ],
+            "graph_relationship_name": "AppearsIn"
+        }
+    }
+}
